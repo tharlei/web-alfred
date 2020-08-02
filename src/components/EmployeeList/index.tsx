@@ -30,6 +30,7 @@ const EmployeeList = ({ loadRequest, employees }: Props) => {
 
   useEffect(() => {
     refreshEmployees();
+    // eslint-disable-next-line
   }, [employees])
 
   useEffect(() => {
