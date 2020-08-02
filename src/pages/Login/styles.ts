@@ -54,7 +54,7 @@ export const WelcomeContent = styled.div<BackgroundImage>`
     top: 0;
     right: 0;
     bottom: 0;
-    background-color: #be0000cc;
+    background-color: #801336cc;
   }
 
   h1 {
