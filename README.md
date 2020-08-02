@@ -1,44 +1,102 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+ <img width="250" src="https://alfreddelivery.com/img/logo.png"/>
+</p>
 
-## Available Scripts
+<p align="center">
+  <img src="https://img.shields.io/static/v1?label=react&message=framework&color=blue&style=for-the-badge&logo=REACT"/>
+  <img src="https://img.shields.io/static/v1?label=typescript&message=use&color=darkblue&style=for-the-badge&logo=Typescript"/>
+  <img src="https://img.shields.io/static/v1?label=Redux&message=use&color=purple&style=for-the-badge&logo=redux"/>
+  <img src="https://img.shields.io/static/v1?label=netlify&message=deploy&color=lighter&style=for-the-badge&logo=netlify"/>
+</p>
 
-In the project directory, you can run:
+> Status do Projeto: :heavy_check_mark: (concluido)
 
-### `npm start`
+### Tópicos 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+:small_blue_diamond: [Descrição do projeto](#descrição-do-projeto)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+:small_blue_diamond: [Funcionalidades](#funcionalidades)
 
-### `npm test`
+:small_blue_diamond: [Deploy da Aplicação](#deploy-da-aplicação-dash)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+:small_blue_diamond: [Pré-requisitos](#pré-requisitos)
 
-### `npm run build`
+## Descrição do projeto 
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p align="justify">
+  Dashboard de gerenciamento de cadastros de empregados
+</p>
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Funcionalidades
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+:heavy_check_mark: Rotas privadas
 
-### `npm run eject`
+:heavy_check_mark: Layout reutilizável
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+:heavy_check_mark: Listagem de empregados 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+:heavy_check_mark: Adição de empregados  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+:heavy_check_mark: Edição de empregados 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+:heavy_check_mark: Exclusão de empregados 
 
-## Learn More
+:heavy_check_mark: Filtragem de empregados
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+:heavy_check_mark: Adaptado ao mobile
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+:heavy_check_mark: Redux com Duck Pattern
+
+## Deploy da Aplicação :dash:
+
+> Link do deploy da aplicação: https://alfredempregados.netlify.app/
+
+:warning: **API gratuita que dura apenas um dia, estarei atualizando manualmente (do dia 03/08 até 10/08)**
+
+## Pré-requisitos
+
+:warning: [Node 12.x](https://nodejs.org/en/download/)
+
+## Como rodar a aplicação :arrow_forward:
+
+No terminal, clone o projeto: 
+
+```
+git clone https://github.com/Tharlei/web-alfred
+```
+
+Ainda no terminal, entre na pasta:
+
+```
+cd web-alfred
+```
+
+Instale as dependências:
+
+```
+npm install
+```
+
+Por fim, inicie o projeto:
+
+```
+npm start
+```
+
+## Linguagens, dependências e libs utilizadas :books:
+
+- [React](https://pt-br.reactjs.org/docs/create-a-new-react-app.html)
+- [React Toastify](https://github.com/fkhadra/react-toastify)
+- [Redux](https://redux.js.org/)
+- [Axios](https://github.com/axios/axios)
+
+## Desenvolvedor :octocat:
+
+[<img src="https://avatars2.githubusercontent.com/u/32899049?s=460&u=946f73939bb511fa8ae40ed80764cc4dbffe359f&v=4" width=115><br><sub>Tharlei Aleixo</sub>](https://github.com/Tharlei)
+
+
+## Licença 
+
+The [MIT License]() (MIT)
+
+Copyright :copyright: 2020 - Alfred Delivery Empregados
