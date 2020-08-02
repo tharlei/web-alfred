@@ -36,7 +36,7 @@ const EmployeesEdit: React.FC = (props: any) => {
     e.preventDefault();
 
     try {
-      await api.put(`/${id}`, formData);
+      await api.put(`/employees/${id}`, formData);
       toast.success("Empregado editado com sucesso!");
     }
     catch (error) {

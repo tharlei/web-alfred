@@ -35,7 +35,7 @@ const EmployeeList = ({ loadRequest, employees }: Props) => {
 
   useEffect(() => {
     loadRequest();
-  }, [loadRequest]);
+  }, [loadRequest, employeeToDelete]);
 
   async function refreshEmployees() {
     try {
@@ -80,7 +80,7 @@ const EmployeeList = ({ loadRequest, employees }: Props) => {
 
   async function handleDelete() {
     try {
-      await api.delete(`/${employeeToDelete}`);
+      await api.delete(`/employees/${employeeToDelete}`);
       toast.success('Empregado excluído com sucesso!');
       refreshEmployees();
     }
