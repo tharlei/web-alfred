@@ -2,7 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-import { FaCar, FaUserCircle, FaSignOutAlt } from 'react-icons/fa';
+import { FaUser, FaUserCircle, FaSignOutAlt } from 'react-icons/fa';
 
 import {
   Nav, Header, Main, WrapperImage, WrapperItems, List, Item, HeaderContent, UserIcon, OptionsIcon
@@ -33,9 +33,9 @@ const Dashboard = (props: Props) => {
         <WrapperItems>
           <List>
             <Item className="active">
-              <Link to="/cars">
-                <FaCar />
-                <p>Carros</p>
+              <Link to="/employees">
+                <FaUser />
+                <p>Empregados</p>
               </Link>
             </Item>
           </List>

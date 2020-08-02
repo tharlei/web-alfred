@@ -1,10 +1,10 @@
 import { all, takeLatest } from 'redux-saga/effects';
 
-import { RepositoriesTypes } from './repositories/types';
-import { load } from './repositories/sagas';
+import { EmployeesTypes } from './employees/types';
+import { load as loadEmployees } from './employees/sagas';
 
 export default function* rootSaga() {
   return yield all([
-    takeLatest(RepositoriesTypes.LOAD_REQUEST, load),
+    takeLatest(EmployeesTypes.LOAD_REQUEST, loadEmployees),
   ]);
 }

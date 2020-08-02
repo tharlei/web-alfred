@@ -1,8 +1,6 @@
 import React, { FormEvent } from 'react';
 import { useHistory } from 'react-router-dom';
-import api from '../../services/api';
-
-import { } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 import {
   Container, WelcomeWrapper, WelcomeContent, AccessWrapper, AccessContent, AccessImage, AccessButton
@@ -17,15 +15,14 @@ const Login = () => {
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
 
-    // try {
-    //   await api.get('isAlive');
-    //   localStorage.setItem('token', '94a08da1fecbb6e8b46990538c7b50b2');
-    //   history.push('/');
-    // }
-    // catch (error) {
-    //   console.log(error)
-    //   toast.error('Tente novamente mais tarde...');
-    // }
+    try {
+      localStorage.setItem('token', '94a08da1fecbb6e8b46990538c7b50b2');
+      history.push('/');
+    }
+    catch (error) {
+      console.log(error)
+      toast.error('Tente novamente mais tarde...');
+    }
   }
 
   return (
@@ -34,7 +31,7 @@ const Login = () => {
         <WelcomeWrapper>
           <WelcomeContent backgroundImage={bg}>
             <h1>Bem vindo</h1>
-            <p>Acesse o gerencial de carros</p>
+            <p>Acesse o gerencial de empregados</p>
           </WelcomeContent>
         </WelcomeWrapper>
         <AccessWrapper>

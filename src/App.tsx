@@ -1,21 +1,24 @@
 import React from 'react';
-import { Router, BrowserRouter } from 'react-router-dom';
 import Routes from './routes';
 import history from './routes/history';
-import { Provider } from 'react-redux';
 import store from './store';
+import { Router, BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { ToastContainer } from 'react-toastify';
 
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 
 const App = () => {
   return (
-    <Provider store={store}>
-      <Router history={history}>
-        <BrowserRouter>
+    <Router history={history}>
+      <BrowserRouter>
+        <Provider store={store}>
           <Routes />
-        </BrowserRouter>
-      </Router>
-    </Provider>
+          <ToastContainer autoClose={3000} />
+        </Provider>
+      </BrowserRouter>
+    </Router>
   );
 }
 

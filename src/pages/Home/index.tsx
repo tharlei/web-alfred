@@ -1,52 +1,45 @@
-import React, { FormEvent } from 'react';
-import { useHistory } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import api from '../../services/api';
 
-import { } from 'react-icons/fa';
+import { FaUser } from 'react-icons/fa';
 
 import {
-  Container, WelcomeWrapper, WelcomeContent, AccessWrapper, AccessContent, AccessImage, AccessButton
+  Container, CardsWrapper, Card, CardIcon, CardTitle, CardDescription
 } from './styles';
 
-import logo from '../../assets/logo.png';
-import bg from '../../assets/bg.jpg';
-
 const Home = () => {
-  const history = useHistory();
 
-  async function handleSubmit(e: FormEvent) {
-    e.preventDefault();
+  const [loading, setLoading] = useState<boolean>(true)
+  const [amountEmployees, setAmountEmployees] = useState<number>(0)
 
-    // try {
-    //   await api.get('isAlive');
-    //   localStorage.setItem('token', '94a08da1fecbb6e8b46990538c7b50b2');
-    //   history.push('/');
-    // }
-    // catch (error) {
-    //   console.log(error)
-    //   toast.error('Tente novamente mais tarde...');
-    // }
-  }
+  useEffect(() => {
+    api.get('/employees')
+      .then(res => {
+        setAmountEmployees(res.data.length)
+        setLoading(false);
+      });
+  }, [])
 
   return (
-    <div id="page-login">
+    <div id="page-home">
       <Container>
-        <WelcomeWrapper>
-          <WelcomeContent backgroundImage={bg}>
-            <h1>Bem vindo</h1>
-            <p>Acesse o gerencial de carros</p>
-          </WelcomeContent>
-        </WelcomeWrapper>
-        <AccessWrapper>
-          <AccessContent>
-            <AccessImage>
-              <img src={logo} alt='logo' />
-            </AccessImage>
-            <AccessButton>
-              <button onClick={handleSubmit}>Entrar</button>
-            </AccessButton>
-          </AccessContent>
-        </AccessWrapper>
+        {
+          !loading && (
+            <CardsWrapper>
+              <Card to="/employees">
+                <CardIcon>
+                  <FaUser />
+                </CardIcon>
+                <CardTitle>
+                  <p>{amountEmployees}</p>
+                </CardTitle>
+                <CardDescription>
+                  Cadastros
+                </CardDescription>
+              </Card>
+            </CardsWrapper>
+          )
+        }
       </Container>
     </div>
   )

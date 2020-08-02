@@ -1,139 +1,52 @@
 import styled from 'styled-components';
-
-interface BackgroundImage {
-  backgroundImage: string;
-}
+import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  flex: 1 1 auto;
-  margin-right: -12px;
-  margin-left: -12px;
+  padding: 30px 15px;
+  min-height: calc(100vh - 123px);
+`;
+
+export const CardsWrapper = styled.div`
   max-width: 100%;
-  overflow: hidden;
-`;
-
-export const WelcomeWrapper = styled.div`
-  padding: 0;
-  
-  @media (max-width: 960px) {
-    display: none;
-  }
-
-  @media (min-width: 960px) {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 33.3333333333%;
-    flex: 0 0 33.3333333333%;
-    max-width: 33.3333333333%;
-  }
-
-  @media (min-width: 1264px) {
-    flex: 0 0 58%;
-    max-width: 58%;
-  }
-`;
-
-export const WelcomeContent = styled.div<BackgroundImage>`
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background: url(${props => props.backgroundImage}) no-repeat;
-  background-size: cover;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  flex-direction: column;
+`;
+
+export const Card = styled(Link)`
+  text-decoration: none;
+  cursor: pointer;
+  height: 250px;
+  width: 250px;
+  border-radius: 4px;
+  padding: 20px;
+  background-color: #fff;
+  color: rgba(0,0,0,.87);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+`;
+
+export const CardIcon = styled.div`
   display: flex;
   justify-content: center;
+  margin-top: 9px;
+  padding: 10px;  
 
-  :before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgb(4, 57, 108, 0.9);
-  }
-
-  h1 {
-    color: #fff!important;
-    z-index: 999;
-    font-size: 50px;
-    border-bottom: .5px solid #fff;
-  }
-
-  p {
-    margin-top: 40px;
-    color: #fafafa!important;
-    opacity: .8;
-    font-size: 16px;
-    z-index: 999;
+  svg {
+    font-size: 70px;
+    color: rgb(255, 133, 20);
   }
 `;
 
-export const AccessWrapper = styled.div`
-  @media (max-width: 960px) {
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  @media (min-width: 960px) {
-    flex: 0 0 33.3333333333%;
-    max-width: 33.3333333333%;
-  }
-
-  @media (min-width: 1264px) {
-    flex: 0 0 41.6666666667%;
-    max-width: 41.6666666667%;
-  }
+export const CardTitle = styled.div`
+  color: rgba(0,0,0,.6);
+  font-size: 30px;
+  text-align: center;
+  padding: 16px;
+  font-weight: 400;
+  margin-bottom: 16px;
 `;
 
-export const AccessContent = styled.div`
-  @media (min-width: 960px) {
-    max-width: 900px;
-  }
-
-  @media (min-width: 1264px) {
-    max-width: 1185px;
-  }
-
-  width: 100%;
-  padding: 12px;
-  margin-right: auto;
-  margin-left: auto;
-`;
-
-export const AccessImage = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-bottom: 80px;
-
-  img {
-    width: 150px;
-  }
-`;
-
-export const AccessButton = styled.div`
-  display: flex;
-  justify-content: center;
-
-  button {
-    cursor: pointer;
-    margin-top: 16px;
-    border: none;
-    height: 36px;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    padding: 0px 16px;
-    background-color: var(--red-dark);
-    color: #fff;
-    font-size: 16px;
-    text-transform: uppercase;
-  }
+export const CardDescription = styled.div`
+  color: rgba(0,0,0,.87);
+  text-align: center;
 `;

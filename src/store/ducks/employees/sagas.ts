@@ -5,7 +5,7 @@ import { loadSuccess, loadFailure } from './actions';
 
 export function* load() {
   try {
-    const response = yield call(api.get, 'users/diego3g/repos');
+    const response = yield call(api.get, '/employees');
 
     yield put(loadSuccess(response.data));
   } catch (err) {

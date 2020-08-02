@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
-import repositories from './repositories';
+import employees from './employees';
 
 export default combineReducers({
-  repositories,
+  employees,
 });

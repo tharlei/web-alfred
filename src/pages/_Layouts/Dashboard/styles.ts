@@ -89,10 +89,11 @@ export const Item = styled.li`
   }
 
   svg {
-    font-size: 24px;
+    font-size: 16px;
     float: left;
     margin-right: 15px;
     line-height: 30px;
+    margin-top: 5px;
     width: 30px;
     text-align: center;
     color: #a9afbb;
